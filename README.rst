@@ -1,6 +1,5 @@
-|logo|
 
-Maskfill 
+Maskfill SciStreams
 =====================
 
 |Streamlit| |MIT licensed| 
