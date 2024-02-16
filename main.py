@@ -110,7 +110,7 @@ if sel_options == "References":
 		""")
 
 	st.write(""" 
-		This Streamlit application is made by Robert Dzudzar, code of the app can be found on [**GitHub**](https://github.com/rdzudzar).
+		This Streamlit application is made by SciStreams, code of the app can be found on [**GitHub**](https://github.com/SciStreams/maskfill_streamlit).
 		""")
 	st.write("")
 	st.write(""" 
