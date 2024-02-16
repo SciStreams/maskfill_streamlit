@@ -1,5 +1,5 @@
 
-Maskfill SciStreams
+Maskfill
 =====================
 
 |Streamlit| |MIT licensed| 
