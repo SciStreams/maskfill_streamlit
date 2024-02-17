@@ -32,7 +32,7 @@ def show_data(image_clean, image_cr, mask):
 
     # Create subplots
     fig = make_subplots(rows=1, cols=6,
-                        subplot_titles=("Clean", "Cosmic Rays", "Mask"),
+                        subplot_titles=("Original", "Cosmic Rays", "Mask"),
                         specs=[[{}, None, {}, None, {}, None]],
                         shared_yaxes=True)
 
@@ -45,7 +45,7 @@ def show_data(image_clean, image_cr, mask):
         colorscale='Viridis',
         zmin=vmin,
         zmax=vmax,
-        colorbar=dict(x=0.26, title='Clean', thickness=15)), row=1, col=1
+        colorbar=dict(x=0.26, title='', thickness=15)), row=1, col=1
     )
 
     fig.add_trace(go.Heatmap(
@@ -53,7 +53,7 @@ def show_data(image_clean, image_cr, mask):
         colorscale='Viridis',
         zmin=vmin,
         zmax=vmax,
-        colorbar=dict(x=0.61, title='Clean', thickness=15)), row=1, col=3
+        colorbar=dict(x=0.61, title='', thickness=15)), row=1, col=3
     )
 
 
@@ -62,7 +62,7 @@ def show_data(image_clean, image_cr, mask):
         colorscale='gray_r',
         zmin=0.1,
         zmax=0.9,
-        colorbar=dict(x=0.96, title='Clean', thickness=15)), row=1, col=5
+        colorbar=dict(x=0.96, title='', thickness=15)), row=1, col=5
     )
 
     # Update layout
@@ -100,7 +100,7 @@ def simple_run(image_clean, image_cr, mask, mfill_smooth, mfill):
         colorscale='Viridis',
         zmin=vmin,
         zmax=vmax,
-        colorbar=dict(x=0.44, title='Clean', thickness=15)
+        colorbar=dict(x=0.44, title='', thickness=15)
     )
     fig.add_trace(trace1, row=1, col=1)
 
@@ -109,7 +109,7 @@ def simple_run(image_clean, image_cr, mask, mfill_smooth, mfill):
         colorscale='Viridis',
         zmin=vmin,
         zmax=vmax,
-        colorbar=dict(x=0.96, title='Clean', thickness=15)
+        colorbar=dict(x=0.96, title='', thickness=15)
     )
     fig.add_trace(trace2, row=1, col=3)
 
@@ -136,7 +136,7 @@ def compare_image_simple_run(image_clean, image_cr, mask, mfill_smooth, mfill, v
 
         # Create subplots
     fig = make_subplots(rows=1, cols=6,
-                        subplot_titles=("Clean", "maskfill", "maskfill smooth"),
+                        subplot_titles=("Original", "maskfill", "maskfill smooth"),
                         specs=[[{}, None, {}, None, {}, None]],
                         shared_yaxes=True)
 
@@ -181,7 +181,6 @@ def compare_image_simple_run(image_clean, image_cr, mask, mfill_smooth, mfill, v
     fig.update_xaxes(matches='x')
     fig.update_layout({"uirevision": "foo"}, overwrite=True)
     st.plotly_chart(fig)
-
 
 
 def indices_within_distance(array, x, y, distance):
