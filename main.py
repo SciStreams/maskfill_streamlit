@@ -67,7 +67,6 @@ if sel_options == "Compare Results [Simple Run]":
 		#mfill_smooth, mfill = maskfill(image_cr, mask)
 		
 		compare_image_simple_run(image_clean, image_cr, mask, mfill_smooth, mfill, new_vmin, new_vmax)
-		compare_image_simple_run_vertical(image_clean, image_cr, mask, mfill_smooth, mfill, new_vmin, new_vmax)
 
 if sel_options == "Optional Arguments":
 	with st.sidebar:
